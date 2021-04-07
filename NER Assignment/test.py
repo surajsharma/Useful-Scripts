@@ -30,6 +30,8 @@ def loop():
     
   
   itemTotal = sum(billDict["Price"])
+  salesTax = 5
+  
   
   print(itemTotal)
   
@@ -37,7 +39,6 @@ def loop():
 
 def index_exists(ls, i):
   return (0 <= i < len(ls)) or (-len(ls) <= i < 0)
-
 
 
 if __name__ == '__main__':
