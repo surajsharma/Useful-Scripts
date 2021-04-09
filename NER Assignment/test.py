@@ -1,14 +1,27 @@
 import fire
 import re
+import spacy
 
 def loop():
   # problem: recognize food and medicine items for selective taxation
+  # problem: do this with named entity recognition
+  # problem: how to make spacy recognize books, medical items?
+  
+  
+  nlp = spacy.load("en")
   
   print("Enter a blank line to see total")
   item = input("➡️ ")
   
   billDict =  {"Item":[],"Qty":[],"Price":[]};
   
+  dox = nlp(item)
+  
+  nouns = [[x.text, x.pos_] for x in dox if x.pos_ == 'NOUN']
+  for n in nouns:
+    print(n)
+    
+    
   while(item !=  ""):
     numbers = re.findall('[0-9]+', item)
     itemstr = re.findall('[^\d ].*[^?= at\d.\d]', item)
@@ -27,13 +40,18 @@ def loop():
     billDict["Price"].append(itemTotal)
     
     item = input("➡️ ")
+    dox = nlp(item)
     
-  
+    nouns = [[x.text, x.pos_] for x in dox if x.pos_ == 'NOUN']
+    
+    for n in nouns:
+      print(n)
+      
   itemTotal = sum(billDict["Price"])
   salesTax = 5
   
   
-  print(itemTotal)
+  print("Total: ",itemTotal)
   
   return 'bye'
 

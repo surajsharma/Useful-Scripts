@@ -7,8 +7,10 @@ import seaborn as sns
 
 from sklearn import datasets
 from sklearn import manifold 
+from sklearn.datasets import fetch_openml
+
+mnist = fetch_openml('mnist_784')
 
 
-#data = datasets.fetch.openml('mnist_784', version=1, return_x_y=True)
-#pixel_values, targets = data 
-#targets = targets.astype(int)
+pixel_values, targets = mnist 
+targets = targets.astype(int)
