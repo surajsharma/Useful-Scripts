@@ -6,8 +6,7 @@ def loop():
   # problem: recognize food and medicine items for selective taxation
   # problem: do this with named entity recognition
   # problem: how to make spacy recognize books, medical items?
-  
-  
+    
   nlp = spacy.load("en")
   
   print("Enter a blank line to see total")
