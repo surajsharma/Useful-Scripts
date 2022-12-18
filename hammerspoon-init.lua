@@ -1,5 +1,5 @@
 local hyper = {"alt", "cmd"}
-local BITLY_API_ACCESS_TOKEN = "0304c31fccbfd280d46049beef7103a7042313b4"
+local BITLY_API_ACCESS_TOKEN = ""
 -- Load Spoons
 
 hs.loadSpoon("MiroWindowsManager")
@@ -23,11 +23,11 @@ spoon.MiroWindowsManager:bindHotkeys({
 })
 
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "D", function()
-	hs.urlevent.openURL("https://devdocs.io")
+  hs.urlevent.openURL("https://devdocs.io")
 
 end)
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "R", function()
-	hs.urlevent.openURL("http://reload.extensions")
+  hs.urlevent.openURL("http://reload.extensions")
 
 end)
 
@@ -59,13 +59,13 @@ end)
 
 
 -- View your api_dev_key here: http://pastebin.com/api
-local PASTEBIN_API_DEVELOPER_KEY = "4u4rX4aNA3phF9ZZJQxZe2B_YFUhckFE"
+local PASTEBIN_API_DEVELOPER_KEY = ""
 
- -- Generate your api_user_key here: http://pastebin.com/api/api_user_key.html
- local PASTEBIN_API_USER_KEY = "44538f0017dc9d1cb143f2ea05a891d7"
+-- Generate your api_user_key here: http://pastebin.com/api/api_user_key.html
+local PASTEBIN_API_USER_KEY = ""
 
- -- This makes a paste public or private, public = 0, unlisted = 1, private = 2
- local PASTEBIN_API_PASTE_PRIVATE = "1"
+-- This makes a paste public or private, public = 0, unlisted = 1, private = 2
+local PASTEBIN_API_PASTE_PRIVATE = "1"
 
  --[[
 There are 7 valid values available which you can use with the 'api_paste_expire_date' parameter:
